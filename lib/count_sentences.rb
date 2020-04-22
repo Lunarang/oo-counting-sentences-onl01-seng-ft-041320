@@ -16,7 +16,7 @@ class String
 
   def count_sentences
     #\W+ is a Regexp pattern that means "One or more non-word characters."
-    self.split(/\W+/).delete_if{|e| e.length == 0}
+    text.scan(/[\w']+/)
     self.size
   end
 end
